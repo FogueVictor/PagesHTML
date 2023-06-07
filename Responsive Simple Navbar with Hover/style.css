@@ -1,0 +1,96 @@
+@import url('https://font.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    height: 100vh;
+    width: 100vw;
+    background: url(img/Back.jpg);
+    background-size: cover;
+}
+
+.nav{
+    position: absolute;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav .logo{
+    font-size: 2em;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav .nav-links ul{
+    display: flex;
+}
+.nav .nav-links ul li a{
+    margin: 0 25px;
+    color: #ededed;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.nav-links ul li a:hover,.nav-links ul li.active a{
+    color: #00abf0;
+}
+.nav .menu-hamburger{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 35px;
+}
+
+@media screen and (max-width : 900px) {
+    .nav{
+        padding: 0;
+    }
+    .nav .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav .menu-hamburger{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
